@@ -1,0 +1,176 @@
+@import (reference) "./variables.less";
+
+.flex-inline-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxShadow() {
+  box-shadow: @box-shadow-normal;
+}
+
+.baseCard() {
+  background: #fff;
+  // box-shadow: @box-shadow-normal;
+  border-radius: 4px;
+}
+
+.useFormSection() {
+  --do-form-split-gap: 18px;
+  --do-form-split-color: #dee4f5;
+  .do-form-split {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(var(--do-form-split-gap) * 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    > div {
+      width: 100%;
+      border: 0 dashed var(--do-form-split-color);
+      border-bottom-width: 1px;
+      position: relative;
+      .el-icon-d-arrow-right {
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+    &.with-label {
+      > div {
+        position: relative;
+        .split-txt {
+          box-sizing: border-box;
+          background-color: #ffffff;
+          border-radius: 4px;
+          white-space: nowrap;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          user-select: none;
+          -webkit-user-drag: none;
+        }
+      }
+    }
+  }
+  .do-form-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    .do-form-left {
+      box-sizing: border-box;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+    .do-form-split {
+      box-sizing: border-box;
+      width: calc(var(--do-form-split-gap) * 2);
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      > div {
+        width: 1px;
+        border-right-width: 1px;
+      }
+    }
+    .do-form-right {
+      box-sizing: border-box;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+    .el-form-item.do-fill-form,
+    .el-form-item.do-fill-form > .el-form-item__content {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      > .el-form-item__content {
+        padding-bottom: 20px;
+        > .el-form-item__error {
+          margin: 0;
+          position: absolute;
+          top: unset;
+          bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+.pure-number() {
+  font-family: Verdana, Geneva, Tahoma, monospace, sans-serif;
+  .cell > & {
+    white-space: nowrap;
+  }
+}
+
+.ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.scrollbar-size(@w, @h, @style, @color) when (@w >= 8px) {
+  border: 2px @style @color;
+}
+.scrollbar-size(@w, @h, @style, @color) when (@h >= 8px) {
+  border: 2px @style @color;
+}
+
+.custom-scrollbar(@w: 12px, @h: 12px, @thumbColor: #dcdee2, @trackColor: #f8f8f9) {
+  &::-webkit-scrollbar {
+    width: @w;
+    height: @h;
+  }
+  &::-webkit-scrollbar-track-piece {
+    border: 1px solid, @trackColor;
+    .scrollbar-size(@w, @h, solid, @trackColor);
+    background: @trackColor;
+  }
+  &::-webkit-scrollbar-button:end:increment,
+  &::-webkit-scrollbar-button:start:decrement,
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid, @trackColor;
+    .scrollbar-size(@w, @h, solid, @trackColor);
+    border-radius: 6px;
+    background-color: @thumbColor;
+  }
+  &::-webkit-scrollbar-button:end:increment:hover,
+  &::-webkit-scrollbar-button:start:decrement:hover,
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #7c7c7c;
+  }
+  &::-webkit-scrollbar-button:end:increment,
+  &::-webkit-scrollbar-button:start:decrement {
+    display: none
+  }
+}

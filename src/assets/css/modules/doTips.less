@@ -1,0 +1,55 @@
+.do-tips {
+  box-sizing: border-box;
+  margin-top: 5px;
+  border-left: 2px solid #42A5F5;
+  border-radius: 4px;
+  background-color: rgba(245, 245, 246, 1);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  &.only-one {
+    box-sizing: border-box;
+    padding: 4px 12px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .do-tip__50 {
+    box-sizing: border-box;
+    width: 50px;
+    min-width: 50px;
+  }
+  .do-tip__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    .do-tip__each {
+      box-sizing: border-box;
+      padding: 4px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      .do-tip__line {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .do-tip__label {
+          box-sizing: border-box;
+          padding-right: 6px;
+          color: #999999;
+          white-space: nowrap;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        .do-tip__content {
+        }
+      }
+    }
+  }
+}

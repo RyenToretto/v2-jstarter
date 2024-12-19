@@ -1,0 +1,58 @@
+@import (reference) "@/assets/css/common/index.less";
+
+.do-summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px @gap-s;
+  .summary-card__each {
+    box-sizing: border-box;
+    margin: 8px;
+    padding: @gap;
+    width: 240px;
+    border-radius: 4px;
+    background: #fff;
+    .summary-card__label {
+      font-size: 14px;
+      line-height: 1;
+      color: #999;
+      margin-bottom: 12px;
+    }
+    .summary-card__value {
+      text-align: right;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      .ellipsis;
+    }
+    .summary-card__line {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      .summary-card__label {
+        margin-bottom: 0;
+      }
+      .summary-card__rate {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      &:not(:first-child) {
+        .summary-card__value {
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+      &.all-simple {
+        .summary-card__value {
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

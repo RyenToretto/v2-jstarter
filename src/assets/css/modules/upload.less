@@ -1,0 +1,79 @@
+@import (reference) "@/assets/css/common/index.less";
+
+.upload-card {
+  text-align: center;
+  color: #999;
+  border: 1px solid @input-border-color;
+  &:hover {
+    color: @primary-color;
+    border-color: @primary-color;
+  }
+  .icon {
+    font-size: 24px;
+  }
+  .text {
+    font-size: 14px;
+  }
+}
+.upload-wrapper {
+  .tips {
+    font-size: 12px;
+    color: #999;
+  }
+}
+
+.with-single-file-upload {
+  > .el-form-item__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    > .single-file-upload {
+      margin-top: 5px;
+    }
+    > .el-input {
+      width: 100%;
+    }
+  }
+}
+
+.with-right-process-upload {
+  box-sizing: border-box;
+  position: relative;
+  .el-upload-list {
+    box-sizing: border-box;
+    padding: 0;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(4px);
+    z-index: 101;
+    transition: all 0.3s linear;
+    > .el-upload-list__item {
+      margin-top: 0;
+      &:not(:first-child) {
+      }
+      &.is-success {
+        display: none;
+      }
+      >.el-progress {
+        position: relative;
+        top: 0;
+      }
+    }
+    &:hover {
+      padding: 12px;
+      height: auto;
+      background-color: #fff;
+      box-shadow: 0 5px 20px #00000026;
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+      > .el-upload-list__item {
+        opacity: 1;
+      }
+    }
+  }
+}

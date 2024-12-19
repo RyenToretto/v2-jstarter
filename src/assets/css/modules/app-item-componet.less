@@ -1,0 +1,141 @@
+@import (reference) "@/assets/css/common/index.less";
+
+.app-item-component {
+  position: relative;
+  &.show-icon {
+    padding-left: 35px;
+  }
+  .app-option-list & {
+    padding: 8px 20px 8px 35px;
+    margin: -8px -20px -8px 0;
+  }
+  & > .app-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    &.empty {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+    .el-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .name,
+  .pkg {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+  .name {
+    line-height: 18px;
+    height: 18px;
+    // TODO：添加其它平台图标
+    &.android,
+    &.ios,
+    &.quickapp,
+    &.mp_weixin,
+    &.mp_douyin,
+    &.web {
+      position: relative;
+      padding-left: 18px;
+      &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    &.ios::before {
+      background-image: url(../../img/icon-ios.png);
+    }
+    &.android::before {
+      background-image: url(../../img/icon-android.png);
+    }
+    &.quickapp::before {
+      background-image: url(../../img/icon-quickapp.png);
+    }
+    &.mp_weixin::before {
+      background-image: url(../../img/icon-mp_weixin.png);
+    }
+    &.mp_douyin::before {
+      background-image: url(../../img/icon-mp_douyin.png);
+    }
+    &.web::before {
+      background-image: url(../../img/icon-web.png);
+    }
+  }
+  .pkg {
+    line-height: 1;
+    // height: 12px;
+    font-size: 12px;
+    color: @font-color-lighter;
+    position: relative;
+    padding-bottom: 1px;
+    & .hover-ctrl-wrap {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-left: 6px;
+      display: none;
+      background-color: rgb(245 247 250);
+      .google-play-btn {
+        background-image: url(../../img/google-play.svg);
+        background-size: contain;
+      }
+      & .btn {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        & + .btn {
+          margin-left: 4px;
+        }
+      }
+      & .btn:hover {
+        color: @primary-color;
+      }
+    }
+    &:hover {
+      .hover-ctrl-wrap {
+        display: flex;
+      }
+    }
+  }
+  .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ccc;
+    visibility: hidden;
+    display: flex;
+    .flag {
+      // font-size: 12px;
+      // background: #eee;
+      // color: #999;
+      padding: 2px;
+      margin: 2px;
+      line-height: 1;
+      height: auto;
+      // &.mode {
+      //   background-color: #09f;
+      // }
+    }
+  }
+  &:hover {
+    .more {
+      visibility: visible;
+    }
+  }
+}

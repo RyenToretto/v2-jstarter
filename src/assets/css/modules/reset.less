@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+th {
+  font-weight: 400;
+}
+
+code {
+  font-family: Consolas, 'courier new', serif;
+  color: #ec1f4e;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 1em;
+  line-height: 1.2;
+  border-radius: 3px;
+}
+
+pre {
+  code {
+    display: block;
+    background-color: #272B33;
+    color: #dddff9;
+    padding: 10px;
+    border-left: 6px solid #ec1f4e;
+    white-space: break-spaces;
+    word-break: break-all;
+  }
+}
+.light {
+  > code {
+    background-color: transparent;
+    color: #000000;
+    border-width: 0;
+  }
+  &.grey-bg {
+    background-color: #f7f6f3;
+  }
+}

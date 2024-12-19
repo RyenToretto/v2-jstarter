@@ -1,0 +1,77 @@
+/*
+<div class="more-points__wrapper">
+  <div class="do-more-points">
+    <i class="el-icon-more"></i>
+  </div>
+</div>
+*/
+.do-more-points {
+  --do-more-point-width: 18px;
+  --do-more-point-height: 20px;
+  --do-more-point-color: #4ea4ff;
+  --do-more-point-border-color: transparent;
+
+  box-sizing: border-box;
+  width: var(--do-more-point-width);
+  height: var(--do-more-point-height);
+  border-radius: 2px;
+  background-color: transparent;
+  border: 1px solid var(--do-more-point-border-color);
+  color: var(--do-more-point-color);
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s linear, border-color 0.3s linear, color 0.3s linear;
+  > i {
+    transform: rotate(90deg);
+  }
+}
+
+.more-points__wrapper {
+  --more-points-height: 28px;
+
+  box-sizing: border-box;
+  height: var(--more-points-height);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    .do-more-points {
+      background-color: #4ea4ff;
+      color: #ffffff;
+    }
+  }
+
+  &.more-points__blue {
+    .do-more-points {
+      width: 28px;
+      height: 100%;
+      color: #409EFF;
+      background: #ecf5ff;
+      border-color: #b3d8ff;
+      &:hover {
+        border-color: #4ea4ff;
+        background-color: #4ea4ff;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &.more-points__normal {
+    .do-more-points {
+      width: 28px;
+      height: 100%;
+      background-color: #ffffff;
+      border: 1px solid #dcdfe6;
+      color: #606266;
+      &:hover {
+        background-color: #ffffff;
+        border-color: #409eff;
+        color: #409eff;
+      }
+    }
+  }
+}
+

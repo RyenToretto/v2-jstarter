@@ -1,0 +1,50 @@
+// .el-select__tags {
+//   .el-tag {
+//     max-width: 100%;
+//     padding-right: 18px;
+//     overflow: hidden;
+//     position: relative;
+//     // display: flex;
+//     // justify-content: flex-start;
+//     // align-items: center;
+//     // flex-wrap: nowrap;
+//     .el-select__tags-text {
+//       width: 100%;
+//       display: block;
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//     }
+//   }
+//   .el-tag__close.el-icon-close {
+//     position: absolute;
+//     right: 0;
+//     top: 50%;
+//     transform: translateY(-50%) scale(0.8);
+//     transform-origin: center;
+//     margin-top: 0;
+//   }
+// }
+.el-select[collapse-tags] {
+  .el-select__tags > span {
+    .el-tag:first-child {
+      max-width: 60%;
+    }
+  }
+}
+.el-select-right {
+  margin-left: -4px;
+  vertical-align: bottom;
+  position: relative;
+  &.el-button,
+  .el-input__inner {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.el-select-left {
+  margin-right: -4px;
+  & + .el-select .el-input__inner {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

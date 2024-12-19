@@ -1,0 +1,41 @@
+@import (reference) "@/assets/css/common/index.less";
+
+.el-message {
+  min-width: 100px;
+  padding: 10px 15px;
+  box-shadow: 0 5px 10px 0 rgba(144, 147, 152, 0.4);
+  .el-icon-warning {
+    color: @color-warning;
+  }
+  .el-icon-error {
+    color: #ef2e2e;
+  }
+}
+.el-message--success {
+  box-shadow: 0 5px 10px 0 rgba(103, 195, 58, 0.3);
+}
+.el-message--info {
+  box-shadow: 0 5px 10px 0 rgba(144, 147, 152, 0.4);
+  background: #fff;
+}
+.el-message--warning {
+  box-shadow: 0 5px 10px 0 rgba(254, 136, 11, 0.25);
+  background: @color-warning-light;
+  .el-message__content {
+    color: @color-warning;
+  }
+}
+.el-message--error {
+  box-shadow: 0 5px 10px 0 rgba(254, 11, 11, 0.2);
+  // background: @color-warning-light;
+  .el-message__content {
+    color: #ef2e2e;
+  }
+}
+.el-message__closeBtn {
+  right: 10px;
+  color: inherit;
+}
+.el-message.is-closable .el-message__content {
+  padding-right: 20px;
+}

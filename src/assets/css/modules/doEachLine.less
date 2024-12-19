@@ -1,0 +1,22 @@
+.do-each-line {
+  --each-line-gap: 10px;
+  --each-line-gap-s: 2px;
+  --each-line-height: 32px;
+
+  box-sizing: border-box;
+  padding: var(--each-line-gap-s) 0;
+  list-style: none;
+  .each-line__core {
+    box-sizing: border-box;
+    padding: 0 var(--each-line-gap);
+    height: var(--each-line-height);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s linear;
+    &:hover {
+      background-color: #f5f7fa;
+    }
+  }
+}

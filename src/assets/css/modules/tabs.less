@@ -1,0 +1,17 @@
+.top-tab {
+  .el-tabs__header {
+    margin-bottom: 0;
+  }
+  .el-tabs__item {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    height: auto;
+    padding: 0 20px 24px;
+  }
+}
+// remove the tab highlight
+.el-tabs__item:focus.is-active.is-focus:not(:active) {
+  box-shadow: none;
+  border-radius: 0;
+}

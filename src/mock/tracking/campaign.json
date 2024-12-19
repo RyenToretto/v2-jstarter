@@ -1,0 +1,358 @@
+{
+  "success": true,
+  "code": "0000",
+  "message": null,
+  "result": {
+    "summary": {
+      "pkg": null,
+      "appName": null,
+      "source": null,
+      "campaignName": null,
+      "campaignId": null,
+      "cost": 22.450000000000014,
+      "active": 1972,
+      "attributionNextDayOpenCnt": 24,
+      "attributionNextDayOpenCntRate": 0.0122,
+      "unitPrice": null,
+      "estimateRevenue": 0.0,
+      "estimateRoi": 0.011384381338742401,
+      "createTime": null,
+      "events": [
+        {
+          "eventKey": "alive",
+          "value": 2,
+          "name": null,
+          "activeRate": 0.0010141987829614604,
+          "type": null
+        },
+        {
+          "eventKey": "campaign_event_ad3_lock_finish_payment",
+          "value": 11,
+          "name": null,
+          "activeRate": 0.005578093306288032,
+          "type": null
+        },
+        {
+          "eventKey": "campaign_event_finish_payment",
+          "value": 39,
+          "name": null,
+          "activeRate": 0.01977687626774848,
+          "type": null
+        },
+        {
+          "eventKey": "device",
+          "value": 239,
+          "name": null,
+          "activeRate": 0.12119675456389452,
+          "type": null
+        },
+        {
+          "eventKey": "start",
+          "value": 2,
+          "name": null,
+          "activeRate": 0.0010141987829614604,
+          "type": null
+        }
+      ]
+    },
+    "total": 84,
+    "min": {
+      "pkg": null,
+      "appName": null,
+      "source": null,
+      "campaignName": null,
+      "campaignId": null,
+      "cost": null,
+      "active": 0,
+      "attributionNextDayOpenCnt": 0,
+      "attributionNextDayOpenCntRate": 0.0,
+      "unitPrice": null,
+      "estimateRevenue": 0.0,
+      "estimateRoi": 0.0,
+      "createTime": null,
+      "events": [
+        {
+          "eventKey": "alive",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.0,
+          "type": null
+        },
+        {
+          "eventKey": "campaign_event_ad3_lock_finish_payment",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.0,
+          "type": null
+        },
+        {
+          "eventKey": "campaign_event_finish_payment",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.0,
+          "type": null
+        },
+        {
+          "eventKey": "device",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.0,
+          "type": null
+        },
+        {
+          "eventKey": "start",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.0,
+          "type": null
+        }
+      ]
+    },
+    "max": {
+      "pkg": null,
+      "appName": null,
+      "source": null,
+      "campaignName": null,
+      "campaignId": null,
+      "cost": 0.77,
+      "active": 59,
+      "attributionNextDayOpenCnt": 1,
+      "attributionNextDayOpenCntRate": 0.0909,
+      "unitPrice": null,
+      "estimateRevenue": 0.0,
+      "estimateRoi": 0.01305084745762712,
+      "createTime": null,
+      "events": [
+        {
+          "eventKey": "alive",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.01694915254237288,
+          "type": null
+        },
+        {
+          "eventKey": "campaign_event_ad3_lock_finish_payment",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.01694915254237288,
+          "type": null
+        },
+        {
+          "eventKey": "campaign_event_finish_payment",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.01694915254237288,
+          "type": null
+        },
+        {
+          "eventKey": "device",
+          "value": 11,
+          "name": null,
+          "activeRate": 0.1864406779661017,
+          "type": null
+        },
+        {
+          "eventKey": "start",
+          "value": 1,
+          "name": null,
+          "activeRate": 0.01694915254237288,
+          "type": null
+        }
+      ]
+    },
+    "lists": [
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-SJH-1104-激活付费-测站点",
+        "campaignId": "1682428312762411",
+        "cost": 9.239999999999998,
+        "active": 0,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.0,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1604488680000,
+        "events": []
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-SJH-1026-激活付费",
+        "campaignId": "1681603217128500",
+        "cost": 5.09,
+        "active": 388,
+        "attributionNextDayOpenCnt": 12,
+        "attributionNextDayOpenCntRate": 0.0309,
+        "unitPrice": 0.013118556701030928,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1603701813000,
+        "events": [
+          {
+            "eventKey": "device",
+            "value": 128,
+            "name": null,
+            "activeRate": 0.32989690721649484,
+            "type": null
+          }
+        ]
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-LYN-1104-激活",
+        "campaignId": "1682417986989080",
+        "cost": 3.8399999999999994,
+        "active": 73,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.05260273972602739,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1604478828000,
+        "events": [
+          {
+            "eventKey": "device",
+            "value": 22,
+            "name": null,
+            "activeRate": 0.3013698630136986,
+            "type": null
+          }
+        ]
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-LYN-1103-次留35%",
+        "campaignId": "1682320266151987",
+        "cost": 2.959999999999999,
+        "active": 110,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.0269090909090909,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1604385646000,
+        "events": [
+          {
+            "eventKey": "device",
+            "value": 42,
+            "name": null,
+            "activeRate": 0.38181818181818183,
+            "type": null
+          }
+        ]
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-LYN-1104-次留35%",
+        "campaignId": "1682420293643373",
+        "cost": 0.9599999999999999,
+        "active": 19,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.050526315789473676,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1604481033000,
+        "events": [
+          {
+            "eventKey": "device",
+            "value": 11,
+            "name": null,
+            "activeRate": 0.5789473684210527,
+            "type": null
+          }
+        ]
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-SJH-1104-激活付费-站点11",
+        "campaignId": "1682501495049268",
+        "cost": 0.11999999999999998,
+        "active": 0,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.0,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1604558474000,
+        "events": []
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-LYN-1103-次留35%+1",
+        "campaignId": "1682331230950510",
+        "cost": 0.11999999999999998,
+        "active": 0,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.0,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1604396089000,
+        "events": []
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-LYN-1104-激活+1",
+        "campaignId": "1682419373325355",
+        "cost": 0.11999999999999998,
+        "active": 0,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.0,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1604480154000,
+        "events": []
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-LYN-0928-次留30%-观察",
+        "campaignId": "1679064667200567",
+        "cost": 0.0,
+        "active": 134,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.0,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1601280851000,
+        "events": []
+      },
+      {
+        "pkg": "com.fun.mango.video",
+        "appName": null,
+        "source": "csj",
+        "campaignName": "direct-SJH-1028-激活付费",
+        "campaignId": "1681776415830076",
+        "cost": 0.0,
+        "active": 19,
+        "attributionNextDayOpenCnt": 0,
+        "attributionNextDayOpenCntRate": 0.0,
+        "unitPrice": 0.0,
+        "estimateRevenue": 0.0,
+        "estimateRoi": 0.0,
+        "createTime": 1603866984000,
+        "events": []
+      }
+    ]
+  }
+}

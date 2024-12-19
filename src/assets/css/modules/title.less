@@ -1,0 +1,86 @@
+@import (reference) "@/assets/css/common/index.less";
+
+// 大标题
+.main-title {
+  @inner-gap: (@header-height - 40)/2;
+  @lineHeight: @header-height - @inner-gap*2;
+  font-size: 20px;
+  font-weight: 400;
+  color: @font-color-light;
+  line-height: @lineHeight;
+  // padding: @inner-gap 0;
+  margin-top: -@gap;
+  position: relative;
+  & > .right {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    height: @lineHeight;
+    font-size: 14px;
+  }
+  &.view-center {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.main-select-title {
+  box-sizing: border-box;
+  .el-dropdown-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: @font-color-light;
+    line-height: (@header-height - 40)/2;
+  }
+}
+
+.main-select-menu {
+  .el-dropdown-menu__item.active {
+    color: @primary-color;
+  }
+}
+
+.page-crumb {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  > .el-breadcrumb__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &.prev-page-title {
+      > .el-breadcrumb__inner {
+        > h2 {
+          font-size: 20px;
+          line-height: 1.42857143;
+          font-weight: 400;
+          text-decoration: none;
+          transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          color: #afafaf;
+          cursor: pointer;
+        }
+      }
+    }
+    > .el-breadcrumb__inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      > h1 {
+        font-size: 20px;
+        line-height: 1.42857143;
+        font-weight: 400;
+        color: #000000;
+        cursor: text;
+      }
+      .tips {
+        margin-left: 6px;
+        margin-bottom: 6px;
+      }
+    }
+    > .el-breadcrumb__separator {
+      font-size: 24px;
+    }
+  }
+}

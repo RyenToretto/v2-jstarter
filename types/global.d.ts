@@ -1,13 +1,8 @@
-import type {
-  ComponentRenderProxy,
-  VNode,
-  VNodeChild,
-  ComponentPublicInstance,
-  FunctionalComponent,
-  PropType as VuePropType,
-} from 'vue';
+import type { ComponentRenderProxy, VNode } from 'vue';
+import type { AxiosInstance } from 'axios'
 
 declare global {
+  declare type Recordable<T = any> = Record<string, T>;
   const __APP_INFO__: {
     pkg: {
       name: string;
@@ -17,7 +12,6 @@ declare global {
     };
     lastBuildTime: string;
   };
-  declare type Recordable<T = any> = Record<string, T>;
 
   declare interface ViteEnv {
     VITE_APP_PROJECT_NAME: string;
@@ -40,10 +34,12 @@ declare global {
     readonly env: ImportMetaEnv;
   }
 
+  interface Window {
+    axios: AxiosInstance
+  }
+
   namespace JSX {
-    // tslint:disable no-empty-interface
     type Element = VNode;
-    // tslint:disable no-empty-interface
     type ElementClass = ComponentRenderProxy;
     interface ElementAttributesProperty {
       $props: any;
@@ -55,10 +51,4 @@ declare global {
       [elem: string]: any;
     }
   }
-}
-
-declare module 'vue' {
-  export type JSXComponent<Props = any> =
-    | { new (): ComponentPublicInstance<Props> }
-    | FunctionalComponent<Props>;
 }

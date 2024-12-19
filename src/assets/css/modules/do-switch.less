@@ -1,0 +1,73 @@
+.do-switch {
+  --do-switch-width: 70px;
+  --do-switch-gap: 6px;
+  --do-switch-circle-size: 16px;
+  --do-switch-active-color: #63d194;
+  --do-switch-inactive-color: #ff7f7f;
+  --do-switch-warning-color: #ffc058;
+  --do-switch-left-gap: var(--do-switch-gap);
+  --do-switch-right-gap: var(--do-switch-gap);
+  border-radius: 10px;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  /* 打开时文字位置设置 */
+  .el-switch__label--right {
+    z-index: 1;
+    right: var(--do-switch-right-gap); /* 不同场景下可能不同，自行调整 */
+  }
+  /* 关闭时文字位置设置 */
+  .el-switch__label--left {
+    z-index: 1;
+    left: var(--do-switch-left-gap); /* 不同场景下可能不同，自行调整 */
+  }
+  /* 显示文字 */
+  .el-switch__label.is-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .el-switch__core,
+  .el-switch__label {
+    width: var(--do-switch-width) !important; /* 开关按钮的宽度大小 */
+  }
+  .el-switch__core {
+    border-color: var(--do-switch-inactive-color);
+    background-color: var(--do-switch-inactive-color);
+  }
+  &.warning-switch {
+    .el-switch__core {
+      border-color: var(--do-switch-warning-color);
+      background-color: var(--do-switch-warning-color);
+    }
+  }
+  .el-switch__label {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    display: none;
+    font-size: 12px;
+  }
+  &.is-checked {
+    .el-switch__core {
+      border-color: var(--do-switch-active-color);
+      background-color: var(--do-switch-active-color);
+    }
+    .el-switch__label {
+      color: #ffffff;
+    }
+  }
+}
+
+.cell-switch__loading {
+  margin-top: 2px;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  &.active {
+    opacity: 1;
+  }
+}

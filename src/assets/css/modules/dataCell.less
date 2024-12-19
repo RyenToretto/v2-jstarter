@@ -1,0 +1,91 @@
+@import (reference) "@/assets/css/common/index.less";
+
+.do-state-point {
+  display: inline-block;
+  position: relative;
+  &::after {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--var-state-color);
+  }
+}
+
+.cell-name {
+  box-sizing: border-box;
+  line-height: 1.5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  > .ellipsis {
+    flex: 1;
+  }
+}
+
+.cell-tips {
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.popover-tips {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.data-cell {
+  @dangerColor: #ff8d9d;
+  @safeColor: #a1e9a2;
+  // 警告色
+  @warningColor: #ffc982;
+  // 溢出颜色
+  @overflowColor: #bbb;
+  @padding: 10px;
+  .pure-number;
+  .ellipsis();
+  // position: relative;
+  // .el-table &,
+  // .el-table &__inner {
+  //   padding: @padding;
+  //   margin: -@padding;
+  // }
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    &.is-danger {
+      background-color: @dangerColor;
+    }
+    &.is-warning {
+      background-color: @warningColor;
+    }
+    &.is-safe {
+      background-color: @safeColor;
+    }
+    &.is-over {
+      background-color: @overflowColor;
+    }
+    & + .indicator-cell {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+}

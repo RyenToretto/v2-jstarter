@@ -1,0 +1,67 @@
+.chart-wrap {
+  .echarts {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.do-charts-tooltip {
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 1;
+  .tooltip-pannel-content {
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+    line-height: 1;
+    .tooltip-pannel-x-label {
+      box-sizing: border-box;
+      line-height: 1;
+      font-size: 14px;
+      font-weight: 400;
+      color: #666;
+    }
+    .tooltip-pannel-detail {
+      box-sizing: border-box;
+      .tooltip-pannel-line {
+        box-sizing: border-box;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .tooltip-pannel-ico {
+          display: inline-block;
+          box-sizing: border-box;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: 4px;
+        }
+        .tooltip-pannel-label {
+          box-sizing: border-box;
+          margin-left: 2px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #666;
+        }
+        .tooltip-pannel-value {
+          flex: 1;
+          box-sizing: border-box;
+          float: right;
+          margin-left: 20px;
+          font-size: 14px;
+          color: #666;
+          font-weight: 700;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          .chart-percent {
+            opacity: 0.5;
+            font-weight: 400;
+            padding-left: 3px;
+          }
+        }
+      }
+    }
+  }
+}

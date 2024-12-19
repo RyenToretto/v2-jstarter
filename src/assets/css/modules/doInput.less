@@ -1,0 +1,65 @@
+@import (reference) "@/assets/css/common/index.less";
+
+.do-input {
+  box-sizing: border-box;
+  padding: 0 0 0 15px;
+  width: 192px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  outline: 0;
+  background-color: #ffffff;
+  background-image: none;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  > span {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .fake_input__label {
+    color: #c0c4cc;
+    flex: 1;
+    .ellipsis();
+  }
+  &.active {
+    .fake_input__label {
+      color: #606266;
+    }
+  }
+  .fake_input__choose {
+    box-sizing: border-box;
+    margin-right: 2px;
+    width: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 4px;
+    color: @primary-color;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+  }
+  .fake_input__remove {
+    box-sizing: border-box;
+    margin-right: 2px;
+    width: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &:hover {
+    .fake_input__choose {
+      width: 56px;
+    }
+    .fake_input__remove {
+      width: 24px;
+    }
+  }
+}

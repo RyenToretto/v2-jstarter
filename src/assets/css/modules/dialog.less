@@ -1,0 +1,320 @@
+@import (reference) "@/assets/css/common/index.less";
+
+.inventory-table__dialog {
+  .el-dialog__body {
+    padding: 0 10px 1px;
+    border-top: 1px solid #ebeef5;
+  }
+}
+.el-dialog__header + .el-dialog__body {
+  padding-top: 10px;
+}
+.advance-dialog {
+  .el-dialog {
+    background-color: #f5f5f8;
+  }
+}
+
+.danger-dialog {
+  .el-dialog__title {
+    color: #f30;
+    font-weight: 600;
+  }
+  animation: danger-box-shadow 1s ease infinite alternate;
+}
+
+@keyframes danger-box-shadow {
+  0% {
+    box-shadow: 0 0 0 0 #f33;
+  }
+  100% {
+    box-shadow: 0 0 50px 20px #f33;
+  }
+}
+
+.do-full-dialog {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  .el-dialog {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    .el-dialog__body {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+  }
+  &.mini-gap {
+    .el-dialog {
+      margin: 5vh auto !important;
+    }
+  }
+
+  .do-dialog__content {
+    box-sizing: border-box;
+    padding: 0 20px;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+  }
+  .do-dialog-content-box {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    .do-form-section {
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+  .do-dialog__view {
+    box-sizing: border-box;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+  }
+  .do-dialog__scroller {
+    box-sizing: border-box;
+    overflow: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+  }
+  .do-dialog__layer {
+    padding-right: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .do-dialog__scroll_form {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    .el-form-item__content {
+      box-sizing: border-box;
+      margin: 0 !important;
+      padding-bottom: 20px;
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      .el-form-item__error {
+        margin: 0;
+        top: unset;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.do-dialog-wrapper {
+  display: inline-block;
+  &.do-disabled {
+    .do-dialog-ctl {
+      .el-button {
+        color: #bcbec2;
+        background-color: #f4f4f5;
+        border-color: #e9e9eb;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.do-dialog-box {
+  .el-dialog__header {
+    .el-dialog__title {
+      display: block;
+      box-sizing: border-box;
+      padding-right: 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .el-dialog__body {
+    padding: 5px;
+    .ctrl-td {
+      & > .cell {
+        margin: 0;
+      }
+    }
+    .el-row {
+      > .el-col:first-child {
+        padding-right: 0 !important;
+      }
+    }
+    .el-form-item {
+      box-sizing: border-box;
+      .el-form-item__error {
+        margin-bottom: 0;
+        position: absolute;
+      }
+    }
+    .useFormSection();
+    .do-dialog-content-box {
+      padding: 0 20px;
+      box-sizing: border-box;
+      width: 100%;
+      position: relative;
+    }
+    .do-dialog-footer {
+      padding: 16px;
+      margin-top: 12px;
+      box-sizing: border-box;
+      min-height: 48px;
+      background: #f0f0f0;
+      position: relative;
+      .do-dialog-bottom-btn {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .el-button--small {
+          min-width: 68px;
+        }
+      }
+    }
+  }
+  &.mini-gap {
+    .el-dialog {
+      margin: 5vh auto !important;
+    }
+  }
+  &.dialog-sticky-header {
+    .el-dialog__header {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+  }
+  &.hide {
+    .el-dialog {
+      background-color: transparent;
+      box-shadow: none;
+      .el-dialog__header {
+        display: none;
+      }
+      .el-dialog__body {
+        .do-dialog-footer {
+          display: none;
+        }
+      }
+    }
+  }
+  &.is-fullscreen {
+    .el-dialog {
+      background-color: #f8f8fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      .el-dialog__header {
+        .el-dialog__title {
+          font-size: 24px;
+          > .tips {
+            margin-left: 5px;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+        .el-dialog__headerbtn {
+          font-size: 24px;
+          height: 30px;
+          position: fixed;
+          z-index: 10;
+        }
+      }
+      .el-dialog__body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        .do-dialog-content-box {
+          flex: 1;
+        }
+      }
+    }
+  }
+  &.reader-dialog {
+    .el-dialog {
+      background-color: #e6e3d9;
+      .el-dialog__body {
+        .do-dialog-footer {
+          background: #f4f1e9;
+        }
+      }
+    }
+  }
+  &.table-dialog {
+    .el-dialog {
+      margin-top: 5vh !important;
+      background-color: #f8f8fa;
+      .el-dialog__body {
+        .do-dialog-footer {
+          background-color: #f8f8fa;
+        }
+      }
+    }
+  }
+  &.dark-dialog {
+    .el-dialog {
+      background-color: #000;
+      .el-dialog__body {
+        .do-dialog-footer {
+          border-radius: 4px;
+          background: #000;
+        }
+      }
+    }
+  }
+}
+
+.custom-dialog {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}

@@ -1,0 +1,22 @@
+export default [
+  { code: '1', name: '激活' },
+  { code: '2', name: '注册' },
+  { code: '3', name: '游戏付费' },
+  { code: '4', name: '次留' },
+  { code: '17', name: '次留(DP)' },
+  { code: '9', name: '3日留存' },
+  { code: '10', name: '4日留存' },
+  { code: '11', name: '5日留存' },
+  { code: '12', name: '6日留存' },
+  { code: '13', name: '7日留存' },
+  { code: '14', name: '8日留存' },
+  { code: '5', name: '应用内授信' },
+  { code: '6', name: '应用内下单(电商)' },
+  { code: '7', name: '应用付费' },
+  { code: '8', name: '自定义目标' },
+  { code: '15', name: '拉活' },
+  { code: '16', name: '快应用付费' },
+  { code: '18', name: '卸载激活' },
+  { code: '19', name: '快应用关键行为' },
+  { code: '20', name: '游戏关键行为' }
+]

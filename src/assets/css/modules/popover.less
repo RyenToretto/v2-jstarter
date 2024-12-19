@@ -1,0 +1,44 @@
+.dark-popover {
+  --dark-pop-bg: #282C33;
+  --dark-pop-color: #dddfe5;
+  box-sizing: border-box;
+  max-width: 50vw;
+  background-color: var(--dark-pop-bg);
+  color: var(--dark-pop-color);
+
+  &[x-placement^=top]  {
+    .popper__arrow {
+      border-top-color: var(--dark-pop-bg);
+      &::after {
+        border-top-color: var(--dark-pop-bg);
+      }
+    }
+  }
+
+  &[x-placement^=bottom]  {
+    .popper__arrow {
+      border-bottom-color: var(--dark-pop-bg);
+      &::after {
+        border-bottom-color: var(--dark-pop-bg);
+      }
+    }
+  }
+
+  &[x-placement^=left]  {
+    .popper__arrow {
+      border-left-color: var(--dark-pop-bg);
+      &::after {
+        border-left-color: var(--dark-pop-bg);
+      }
+    }
+  }
+
+  &[x-placement^=right]  {
+    .popper__arrow {
+      border-right-color: var(--dark-pop-bg);
+      &::after {
+        border-right-color: var(--dark-pop-bg);
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.do-pattern-popover {
+  box-sizing: border-box;
+  padding-top: 18px;
+  width: 224px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: fixed;
+  top: -99999px;
+  left: -99999px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  &.active {
+    opacity: 1;
+  }
+  .do-pattern__arrow {
+    box-sizing: border-box;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0;
+    border-bottom-color: #ebeef5;
+    filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .03));
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    &::after {
+      content: '';
+      display: block;
+      box-sizing: border-box;
+      width: 0;
+      height: 0;
+      border-width: 6px;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: #fff;
+      position: absolute;
+      top: 1px;
+      margin-left: -6px;
+      border-top-width: 0;
+    }
+  }
+  .do-pattern__panel {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ebeef5;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    .do-pattern__list {
+      box-sizing: border-box;
+      padding: 6px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      list-style: none;
+      .do-pattern__each_option {
+        box-sizing: border-box;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        list-style: none;
+        transition: background-color 0.3s linear;
+        .do-pattern__content {
+          box-sizing: border-box;
+          height: 34px;
+          overflow: hidden;
+          line-height: 34px;
+          color: #606266;
+          font-size: 14px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          cursor: pointer;
+          position: relative;
+        }
+        &:hover {
+          background-color: #f5f7fa;
+        }
+      }
+    }
+  }
+}

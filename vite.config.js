@@ -28,6 +28,14 @@ export default ({ command, mode }) => {
     define: {
       __APP_INFO__: JSON.stringify(__APP_INFO__)
     },
+    css: {
+      preprocessorOptions: {
+        less: {
+          // api: 'modern-compiler',
+          additionalData: `@import (reference) "@/assets/css/common/index.less";`
+        }
+      }
+    },
     clearScreen: true, // 设为 false 可以避免 Vite 清屏而错过在终端中打印某些关键信息
     server: {
       host: '127.0.0.1',
@@ -66,18 +74,7 @@ export default ({ command, mode }) => {
         output: {
           manualChunks: {
             // Split external library from transpiled code.
-            vue: [
-              'vue',
-              'vue-router',
-              'vue-router/composables',
-              'vuex',
-              // 'vuex-persist',
-              // 'deepmerge',
-              '@logue/vue2-helpers',
-              '@logue/vue2-helpers/teleport',
-              '@logue/vue2-helpers/vue-router',
-              '@logue/vue2-helpers/vuex'
-            ]
+            vue: ['vue', 'vue-router', 'vue-router/composables', 'vuex']
           },
           plugins: [
             mode === 'analyze'
